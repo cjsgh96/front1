@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.sangpum.html</title>
+    <style>
+        .container
+        {/*width:600px; %로 하는것이 더 편리(계산)*/
+         width:80; /*양쪽 여백 20을 주는 경우*/
+         margin:0 auto;
+         /*margin:50px=>4군데 영역 동일값 부여
+           margin:0(상하) auto(좌우여백은 자동으로 설정해 달라)*/}
+        ul
+        {list-style-type:none;} /*list-style:none;*/
+        label.title
+        {/*class=title인 label에 적용할 스타일*/
+         font-weight:bold;/*<strong>*/
+         width:80px;
+         float:left;/*왼쪽을 기준으로해서 오른쪽 방향으로 배치시킬때 필요로하는 속성명(float) ex)float=right*/}
+         h1,div.centered
+         {text-align:center;}
+         fieldset
+         {margin:15px 10px; /*(상하15px 좌우10px)*/}
+         fieldset legend /*fieldset안에 있는 모든 legend*/
+         {font-weight:bold;
+          font-size:18px;
+          color:purple;}
+          ul li /*ul안에li의 모든항목*/
+          {margin-bottom:10px}
+
+    </style>
+</head>
+<body>
+    <div class="container"><!--div(전체 영역을 설정할때 사용하는 태그)-->
+        <h1>상품주문서</h1>
+        <form>
+            <fieldset>
+                <legend>개인정보</legend>
+                    <ul>
+                        <li><!--label을 만드는 방법2가지--> <!--lable은 필수가 아닌 선택-->
+                            <label for="uname" class="title">이름</label>
+                            <input type="text" name="uname" id="uname" placeholder="여백없이 입력" required><!--name,id를 같이 사용(동일한 이름을 부여)-->
+                        </li>
+                        <li>
+                            <label for="uname" class="title">연락</label>
+                            <input type="text" name="tel" id="tel" placeholder="연락가능한 번호" required>                                   
+                        </li>
+                    </ul>  
+            </fieldset>
+            <!--배송지 정보-->
+            <form>     
+            <fieldset>
+                <legend>배송지 정보</legend>
+                    <ul>
+                        <li>
+                            <label for="address" class="title">주소</label>
+                            <input type="text" size="40" name="address" id="address" required>
+                        </li>
+                        <li>
+                            <label for="uname" class="title">연락</label>
+                            <input type="text" name="tel" id="tel" placeholder="연락가능한 번호" required>                                   
+                        </li>
+                        <li>
+                            <label for="memo" class="title">메모</label>
+                            <textarea name="memo" id="memo" cols="40" rows="3"required> </textarea>  
+                        </li>
+                    </ul>
+            </fieldset>
+            </form>
+            <!--주문 정보-->
+            <form>     
+                <fieldset>
+                    <legend>주문 정보</legend>
+                        <ul>
+                            <li>
+                                <label><input type="checkbox">과테말라 안티구아(100g)</label>
+                                <labee><input type="number" name="antigua" id="antigua"
+                                              value="0" min="0" max="5">개</labee>
+                                <!--<input text="text" name="antigua" value="0">개--> 
+                            </li>
+                            <li>
+                                <label><input type="checkbox">인도네시아 만델링(100g)</label>
+                                <labee><input type="number" name="man" id="man"
+                                              value="0" min="0" max="5">개</labee>                               
+                            </li>
+                            <li>
+                                <label><input type="checkbox">탐라는도다(블렌딩)(100g)</label>
+                                <labee><input type="number" name="do" id="do"
+                                              value="0" min="0" max="5">개</labee>
+                            </li>
+                        </ul>  
+                </fieldset>
+                </form>
+            <!--버튼2개가 중앙에 배치-->
+        </form>
+    </div>
+    <div class="centered">
+            <input type="submit" value="주문하기">
+            <input type="reset" value="다시작성">
+    </div>    
+</body>
+</html>

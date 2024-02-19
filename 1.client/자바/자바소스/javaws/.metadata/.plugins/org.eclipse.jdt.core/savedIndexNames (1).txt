@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\WebTest\1.client\자바\자바소스\javaws\.metadata\.plugins\org.eclipse.jdt.core
+2565356412.index
+4183887230.index
+1865797976.index

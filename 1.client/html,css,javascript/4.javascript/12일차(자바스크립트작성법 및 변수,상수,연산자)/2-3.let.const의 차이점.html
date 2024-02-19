@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-2.let,const,var의 차이점.html</title>
+</head>
+<body>
+    <script>
+        /*
+        const 상수화 시킬때 사용=>React에서 많이 사용
+        
+        1) const를 사용할때에는 반드시 상수화된 변수에 초기값을 설정해야 한다. (선언하자마자 값을 지정)
+        2) 중간에 값을 변경할 수 가 없다.(상수이기 때문에)
+
+        let,var,const 공통점=>변수에 값을 저장할수 있다.
+        let,const의 공통점->1)둘다 중복선언 할수없다.
+                           2)블럭내부에 변수를 선언=>블럭 내부에서만 사용이 가능하다.
+                           3)블럭 내부의 변수는 외부에서 불러다 사용할수 없다(값을 변경 or 출력 시킬수 없다.)
+        let,const의 차이점=>값을 변경시킬수 있다. (let) 값을 변경시킬수 없다. (const)
+        */
+       var foo; //foo 변수 선언(=>데이터를 저장할 공간이 만들어진 것)
+       foo=123;
+       foo=789; //나중에 값을 저장
+       document.write('foo=>'+foo+'<br>');//123
+       
+       const TOO=123;/*const 변수명=값(고정)=>값을 변경할수 없음*/
+       //TOO=456;
+       /*2-3.let.const의 차이점.html:22 Uncaught TypeError: Assignment(할당) to constant variable.
+         할당=>값을 저장시키는 것.
+        */
+       
+       document.write('TOO=>'+TOO+'<br>'); // 브라우저 밖에서 출력
+       //디버깅(debug)->에러를 잡아주는 작업
+       {
+            const TOO=456;//중복선언(재정의) 불가=>똑같은 변수 두번생성 불가
+            const BAR=456;
+            document.write('BAR=>'+BAR+'<br>'); //456 블럭내부에서 선언된 변수는 블럭내부에서 출력할수 있다.
+       }
+       document.write('블럭 밖에서 TOO=>'+TOO+'<br>'); //789
+       document.write('블럭밖에서 사용한 BAR'+BAR+'<br>'); //X 
+    </script>        
+</body>
+</html>

@@ -1,0 +1,18 @@
+package project_5_2;
+
+public class testclass {
+	String name;
+	int score;
+	
+	public testclass() {
+		
+	}
+
+	public testclass(String name, int score) {
+		super();
+		this.name = name;
+		this.score = score;
+	}
+	
+	
+}

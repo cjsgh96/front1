@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.계산문제.html</title>
+    <script>
+        /*
+            자바스크립트 코딩방식->window.document.폼객체이름(myForm).입력양식객체명. or ~ 속성=값
+        */
+        function sum(){//문자열,숫자,논리적인값,객체도 전달
+            let k=document.myForm.kor.value;
+            let e=document.myForm.eng.value;
+            let m=document.myForm.mat.value;
+            let total=Number(k)+Number(e)+Number(m);
+            //parseFloat()=>소숫점까지 문자열상수를 상수로 전환
+            
+            alert("합계는=>"+total);
+                
+        }
+    </script>
+</head>
+<body>
+    <form name="myForm" action="sum.jsp">
+        국어:<input type="text" name="kor" placeholder="국어점수" required><br>
+        영어:<input type="text" name="eng" placeholder="영어점수" required><br>
+        수학:<input type="text" name="mat" placeholder="수학점수" required><p></p>
+        <input type="button" value="합계" onclick="sum()">
+        <input type="reset" value="지우기">
+    </form>
+</body>
+</html>

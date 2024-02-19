@@ -1,0 +1,146 @@
+
+body{
+    background-color: rgb(28 31 38);
+}
+.wrap {
+    
+    width:1200px;
+    margin:0 auto;
+}
+
+/*상단 메뉴바*/
+ul li a {
+    text-decoration: none;
+    color: white;
+}
+li{
+    list-style:none;
+}
+.header {
+    display:flex; /* 인라인 정렬을 위한 flex 설정 */
+    justify-content:space-between; /* 왼쪽 메뉴, 로고, 오른쪽 메뉴 간의 간격을 최대로 설정 */
+    align-items:center; /* 세로 중앙 정렬 */
+    padding:40px;
+}
+
+.logo-container {
+    position:relative; /* 부모인 .header에 relative 설정 */
+}
+.nv1,.nv2,.nv3{
+    display:flex; /* 내비게이션 메뉴를 수평으로 나열하기 위한 flex 설정 */
+}
+
+.nv1 ul,.nv2 ul,.nv3 ul{
+    margin:0;
+    padding:0;
+    display:flex; /* 내비게이션 메뉴 항목을 수평으로 나열하기 위한 flex 설정 */
+}
+
+.nv1 li,.nv2 li,.nv3 li{
+    margin-right:20px; /* 각 내비게이션 메뉴 항목 간의 간격 설정 */
+}
+.nv3 li {
+    margin-right:10px; /* nv3의 간격을 좀 더 벌리기 */
+}
+.dropdownmenu > li > a:hover{ /*상단 메뉴에 마우스를 올릴때 변경될 색깔*/
+    color:rgb(51 98 222);
+}
+.nv3 ul li a{
+    color:rgb(136 136 136);
+}
+.nv3 ul li a:hover{
+    text-decoration:underline;
+}
+/* dropdownmenu */
+.dropdownmenu > li {
+    position:relative;
+    margin-right: 20px;
+}
+
+/* 서브메뉴 */
+.dropdownmenu > li > .subm {
+    position: absolute;
+    top: 100%; /* 바로 하단에 위치 */
+    left:0;
+    z-index:9999;
+    border:2px solid rgb(51 98 222);
+    background-color: rgb(28 31 38);
+    padding:10px;
+    opacity:0; /* 처음에는 투명도 0으로 설정 */
+}
+        
+.dropdownmenu > li:hover > .subm {
+    top:100%; /* 바로 하단에 위치 */
+    opacity: 1;
+    display: block;
+}
+
+
+.dropdownmenu > li > .subm li {
+    margin:5px 0;
+    white-space:nowrap; /* 텍스트가 너무 길어질 때 줄 바꿈 방지 */
+    display:block; /* 블록 레벨 요소로 설정하여 수직으로 정렬 */
+}
+.subm > li > a{ /*서브메뉴 폰트 사이즈*/
+    font-size:12px;
+}
+.subm > li > a:hover{ /* 서브메뉴 hover 텍스트 색상 */
+    color:rgb(51 98 222);
+}
+/* 이미지 슬라이드*/
+.cycle-slideshow{
+    width:100%;
+}
+
+/*게시판*/
+.board-container{
+    background-color:rgb(41 42 46);
+    
+    border-radius: 50px;
+    position:relative;
+    margin-top:30px;   
+}
+
+table,table a{
+    font-size:12px;
+    color:#999999;
+    text-decoration:none;
+}
+table a:hover{
+    text-decoration:underline;
+}
+.board-section {
+    display:flex;
+    justify-content: center;
+    margin-bottom:20px;
+}
+.board-section2{
+    display:flex;
+    justify-content: center;
+    margin-bottom:20px;
+    padding-bottom:50px;
+    
+
+}
+.boarder1,.boarder2,.boarder3,.boarder4{
+    margin-right:20px;
+    
+}
+h3{
+    color:white;
+}
+/*footer*/
+.footer{
+    background:#1F2025;
+    height:100px; 
+    position:relative;
+}
+.footer>div{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+}
+h5{
+    color:white;
+}

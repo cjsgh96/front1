@@ -1,0 +1,64 @@
+package week01.day15;
+
+/*
+ * 
+ * 
+	문자열의 비교
+	각 문자를 비교해야 알 수 있다.
+	//문자열은 문자(char)의 집합이다
+	char[]  str1 = {'a','p','p','l','e'};
+	char[]  str2 = {'b','a','n','a','n', 'a'} ;
+	
+	두 문자열의 비교를 해보자 
+	각 문자를 하나씩 비교하는 과정이 필요하다
+	(반복문과 일련의 절차를 거쳐야 알 수 있다)   
+	  'a'             'b'
+	str1[0] > str2[0]     //  각 문자는 비교가능함 (  'a' ->97   , 'b' ->98 )
+	
+	//자바는 문자열을 편리하게 다루기 위한 String 클래스 제공함
+	String  str3="apple";
+	String  str4 ="banana";
+	int result  =str3.compareTo(str4);   //양수 또는 음수반환, 같으면 0반환함
+	//양수면 str3이 사전상 뒤에 위치함
+
+		
+ */
+public class 문자열비교알아보기 {
+
+	public static int 문자열비교하기(char[] str1, char[] str2) {
+		// 두 문자열 중에서 더 작은길이 구하기
+		int minLength = Math.min(str1.length, str2.length);
+
+		for (int i = 0; i < minLength; i++) {
+			if (str1[i] < str2[i]) {
+				return -1; // arr1이 사전상위에 있음
+			} else if (str1[i] > str2[i]) {
+				return 1; // arr2가 사전상위에 있음
+			}
+			// 현재 인덱스의 문자가 같다면 다r2음 인덱스로 진행
+		}
+		// 앞 부분이 일치하는 경우, 길이가 짧은 배열이 사전상위에 있음
+		if (str1.length < str2.length) {
+			return -1;
+		} else if (str1.length > str2.length) {
+			return 1;
+		}
+		// 배열이 완전히 일치하는 경우
+		return 0;
+	}
+
+	public static void main(String[] args) {
+		char[] str1 = { 'a', 'p', 'p', 'l', 'e' };
+		char[] str2 = { 'b', 'a', 'n', 'a', 'n', 'a' };
+
+		System.out.println(문자열비교하기(str1, str2));
+
+		String str3 = "apple";
+		String str4 = "banana";
+
+		int result = str3.compareTo(str4);
+		System.out.println("result값이 양수면 str3이 사전상 뒤에 위치함 ");
+
+	}
+
+}

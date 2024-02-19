@@ -1,0 +1,58 @@
+package project_5;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class OrderItemProgram {
+   static Scanner sc = new Scanner(System.in);
+   public static void main(String[] args) {
+      int menu;
+      product();
+      while(true) {
+         System.out.println("\t\t~환영합니다~");
+         System.out.println("==================================================");
+         System.out.println("메뉴 :: 1.상품 조회 | 2.상품 구매 | 3.리뷰 등록 | 4.라뷰 삭제");
+         System.out.println("--------------------------------------------------");
+         System.out.print("메뉴를 선택하세요 > ");
+         menu = sc.nextInt();
+         switch(menu) {
+         case 1:
+            
+         }
+      }
+
+   }
+   public static void product() {
+      ArrayList<Product> list = new ArrayList<>();
+       // 파일에서 상품목록 읽어오기
+        BufferedReader reader;
+      try {
+         reader = new BufferedReader(new FileReader("res/상품목록.txt"));
+           String line;
+           while ((line = reader.readLine()) != null) {
+               // 콤마로 구분된 문자열을 분리하여 이름과 점수를 얻음
+               String[] data = line.split(",");
+               
+               // 첫 번째 요소는 이름, 나머지는 점수
+               String name = data[0];
+               int price = Integer.parseInt(data[1]);
+               int stock = Integer.parseInt(data[2]);
+               
+               list.add(new Product(name, price, stock));
+           }
+           for(Product p : list) {
+              System.out.println(p);
+           }
+      } catch (IOException | NumberFormatException e) {
+         // TODO Auto-generated catch block
+         e.printStackTrace();
+      }
+
+
+   }
+
+}

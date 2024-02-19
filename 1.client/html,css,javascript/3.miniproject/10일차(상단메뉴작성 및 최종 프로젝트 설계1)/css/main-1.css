@@ -1,0 +1,5 @@
+/*
+main-1.css=>tablet전용 화면
+아래는 PC화면의 클래스이름
+*/
+.hd1,.sc1,.ft1,.at1,.at2,.cycle-slideshow {display:none;}

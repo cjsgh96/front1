@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.dom1.html</title>
+    <script>
+        
+        //형식: window.on이벤트종류명=처리구문(함수이용)=function(){}
+        window.onload=function(){    
+            let spans=document.getElementsByTagName("span");
+            for(let i=0;i<spans.length;i++){
+                if(i%2==1){
+                    spans[i].innerHTML="테스트중";
+                }else{//짝수인경우
+                    spans[i].innerHTML="임시";
+                }
+            }//for
+        }//onload
+    </script>
+</head>
+<!-- <body onload="test()"> -->
+<body>
+    <span>연습1</span><br>
+    <span>연습1</span><br>
+    <span>연습1</span><br>
+</body>
+</html>

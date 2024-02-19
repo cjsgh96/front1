@@ -1,0 +1,13 @@
+package project_5_2;
+
+import java.util.ArrayList;
+
+public class test {
+	ArrayList<testclass> list = new ArrayList<>();
+	
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

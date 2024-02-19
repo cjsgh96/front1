@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="src/week01/day8/wjyutil.jar"/>
+	<classpathentry kind="lib" path="C:/Users/hbi/Desktop/Sj.jar"/>
+	<classpathentry kind="lib" path="C:/Users/hbi/Desktop/Ysj.jar"/>
+	<classpathentry kind="lib" path="C:/Users/hbi/Desktop/Jkw.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

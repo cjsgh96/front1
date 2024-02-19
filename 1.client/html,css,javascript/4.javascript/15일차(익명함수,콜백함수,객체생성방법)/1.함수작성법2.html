@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.함수작성법2.html</title>
+    <script>
+        //함수선언
+        //프로그램을 작성=>단순한 문장이지만 반복적으로 계속 작성해야 되는 구문=>개발시간이 늘어남
+        //->개발시간 단축(=재사용)=>함수를 작성
+
+
+
+
+            let x=12;
+            let y=67;        
+        if(x>y)
+            document.write("큰값은"+x+"입니다.<br>");
+        else
+            document.write("큰값은"+y+"입니다.<br>");
+        
+        /*
+        let a=97;
+        let b=23;
+        if(a>b)
+            document.write("큰값은"+a+"입니다.<br>");
+        else
+            document.write("큰값은"+b+"입니다.<br>");.
+        */
+
+        //2가지조건중 하나를 만족시킬때 if문 사용 else
+        function big(x,y){ //계산->매개변수 2개 반환값 X
+            if(x>y)
+                document.write("큰값은"+x+"입니다.<br>");
+            else
+                document.write("큰값은"+y+"입니다.<br>");
+        }
+        
+        function big2(x,y){ //계산->매개변수 2개 반환값 X
+            if(x>y)
+                return x; //return 계산결과값(변수) or 계산식
+            else
+                return y;
+        }
+        //추가
+        function big3(x,y){//"678","355" =>Integer.parseInt("678") 자바=>678
+            if(parsInt(x)>parsInt(y))
+                document.write("큰값은"+x+"입니다.<br>");
+            else
+                document.write("큰값은"+y+"입니다.<br>");
+        }
+        
+        
+        //small(a,b)
+        function small(a,b){ 
+            if(a>b)
+                document.write("적은값은"+b+"입니다.<br>");
+            else
+                document.write("적은값은"+a+"입니다.<br>");
+        }
+        
+        function small2(a,b){ 
+            if(a>b)
+                return b; 
+            else
+                return a;
+        }
+        
+
+        
+    </script>
+</head>
+<body>
+    <script>
+        //함수호출(=call)
+        big(23,56);//<script>안에 함수명(전달할값) or 함수명()
+        big(12,98);
+        big(44,65);
+        big(76,90);
+
+        let b=big2(34500,23987); //document.write에 출력하기위해 let b=big2
+        document.write("큰값은"+b+"입니다.<br>") //documnet.write(안에는 변수만 출력)
+
+        
+        big3("678","355");
+        
+        
+        small(34,95);
+
+        let a=small2(90,15);
+        document.write("적은값은"+a+"입니다.<br>");
+
+
+        
+    </script>
+</body>
+</html>

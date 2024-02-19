@@ -1,0 +1,10 @@
+package project_5;
+
+public class buy {
+
+		//구매기능
+	
+	public buy() {
+		
+	}
+}

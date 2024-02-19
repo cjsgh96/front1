@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9.z-index.html</title>
+    <style>
+        /*postion:설정하지 않을경우 static 상태이므로 적용이안됨*/
+        /*영역,이미지 겹치기위한 필수 CSS*/
+        div
+        {position:absolute;} 
+        img
+        {position:absolute;}
+        #spadea
+        {z-index:-3;left:10px;top:20px;} /*z-index:정렬순위;left:가로기준;top:세로기준*/
+        #spade2
+        {z-index:-2;left:40px;top:30px;} /*오른쪽 방향으로 40px 아래10px로 이동*/
+        #spade3
+        {z-index:-1;left:80px;top:40px;}
+        #spade7
+        {z-index: 0;left:120px;top:50px;}  
+    </style>
+</head>
+<body>
+    <h3>z-index 속성테스트</h3>
+    <hr>
+    <div>
+        <img id="spadea" src="../../1.html/media/spade-A.png" width="100" height="140">
+        <img id="spade2" src="../../1.html/media/spade-2.png" width="100" height="140">
+        <img id="spade3" src="../../1.html/media/spade-3.png" width="100" height="140">
+        <img id="spade7" src="../../1.html/media/spade-7.png" width="100" height="140">
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class BufferedWriterExample {
+    public static void main(String[] args) {
+        // 파일 경로 및 파일명 지정
+        String filePath = "example.txt";
+
+        try {
+            // FileWriter와 BufferedWriter를 함께 사용
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(filePath, true));
+
+            // 파일에 쓸 내용 작성
+            String content = "Hello, BufferedWriter!";
+
+            // BufferedWriter를 통해 파일에 내용 쓰기
+            bufferedWriter.write(content);
+
+            // 개행 문자 추가 (선택사항)
+            bufferedWriter.newLine();
+
+            // BufferedWriter를 닫으면 내용이 파일에 쓰여집니다.
+            bufferedWriter.close();
+
+            System.out.println("파일에 내용이 성공적으로 쓰여졌습니다.");
+        } catch (IOException e) {
+            // 예외 처리
+            e.printStackTrace();
+        }
+    }
+}

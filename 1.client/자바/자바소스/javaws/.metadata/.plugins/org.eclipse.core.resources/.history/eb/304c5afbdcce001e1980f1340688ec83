@@ -1,0 +1,26 @@
+package project_5_2;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.ArrayList;
+public class test {
+	ArrayList<testclass> list = new ArrayList<>();
+	
+	public static void main(String[] args) {
+		
+		try {
+			BufferedReader reader = new BufferedReader(new FileReader("res/test.txt"));
+			String line;
+			
+			while((line = reader.readLine()) != null) {
+				System.out.println(line);
+			}
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

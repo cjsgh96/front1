@@ -1,0 +1,43 @@
+package project_5;
+
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Buy extends Product{
+	 ArrayList<Product> list = new ArrayList<>();
+	
+	public void select(ArrayList<Product> list) {
+		
+		int userpoint = 100000;
+		ArrayList<Product> list = new ArrayList<>();
+		
+		Scanner sc = new Scanner(System.in);
+		String select = sc.nextLine();
+		
+		System.out.println("구매하실 상품을 선택하세요");
+		
+		if(select.equals(list)) {
+			System.out.println(select+"를 선택하셨습니다. 구매 하시겠습니까?");
+			String menu = sc.nextLine();
+			
+			
+			
+			
+			
+		}
+
+		
+		
+		
+		
+		
+		
+	}
+
+		      
+
+
+		   
+	
+}

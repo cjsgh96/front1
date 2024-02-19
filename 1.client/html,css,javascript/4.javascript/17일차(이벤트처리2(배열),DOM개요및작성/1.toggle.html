@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.toggle.html</title>
+    <script>
+        /*
+        function toggle(){
+            let b_val=document.f.b_name.value;//document.form객체이름.버튼이름(입력양식).속성명 or ~속성명=값
+            if(b_val=="네이버"){ 
+                document.f.b_name.value="다음";
+            }else{
+                document.f.b_name.value="네이버";
+            }
+        }
+        */
+       /*
+        function toggle(){
+            let b_val=document.getElementById("b_name").value;
+            if(b_val=="네이버"){
+                document.getElementById("b_name").value="다음";
+            }else{
+                document.getElementById("b_name").value="네이버";
+            }
+       }
+       */
+        function toggle(){
+            let b_val=document.getElementById("b_name").value;
+            let text=(b_val=="네이버")?"다음":"네이버";
+            document.getElementById("b_name").value=text;
+        }
+
+        
+    </script>
+</head>
+<body>
+    <center>
+        <h1>버튼을 눌러주세요</h1>
+        <form action="" name="f">
+            <input type="button" value="네이버" name="b_name" id="b_name" onclick="toggle()">
+        </form>
+    </center>
+</body>
+</html>
